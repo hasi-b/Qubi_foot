@@ -7,7 +7,10 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody rb;
     public Vector3 lastMousePos;
-    public float sensitivity = .16f,clampdelta = 42f;
+    public float sensitivity = .16f,clampdelta = 42f,clampforwardSpeed=14f;
+    Vector3 steer;
+    Vector3 forwardSpeed;
+
 
     public float bounds = 5;
 
@@ -37,8 +40,21 @@ public class PlayerController : MonoBehaviour
             lastMousePos = Input.mousePosition;
             vector = new Vector3(vector.x, 0, 0);
             Vector3 moveforce = Vector3.ClampMagnitude(vector, clampdelta);
-            rb.AddForce(Vector3.forward * 2 + (-moveforce * sensitivity - rb.velocity / 5), ForceMode.VelocityChange);
+             steer = (-moveforce * sensitivity - rb.velocity/25);
+           
 
         }
+        else
+        {
+            steer = Vector3.zero;
+        }
+        
+        rb.AddForce(Vector3.forward +steer , ForceMode.VelocityChange);
+        if (rb.velocity.magnitude > clampforwardSpeed)
+        {
+            rb.velocity = Vector3.ClampMagnitude(rb.velocity, clampforwardSpeed);
+        }
+
+
     }
 }
