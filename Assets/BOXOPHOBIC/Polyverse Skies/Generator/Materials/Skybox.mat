@@ -104,10 +104,10 @@ Material:
     m_Colors:
     - _CloudsLightColor: {r: 1, g: 0.97559017, b: 0.9198113, a: 1}
     - _CloudsShadowColor: {r: 0.15419187, g: 0.53798515, b: 0.9339623, a: 1}
-    - _EquatorColor: {r: 1, g: 1, b: 1, a: 1}
-    - _GroundColor: {r: 0.1137255, g: 0.49411768, b: 0.8862746, a: 1}
+    - _EquatorColor: {r: 0.5330188, g: 1, b: 0.56106097, a: 1}
+    - _GroundColor: {r: 0.16429335, g: 0.1966894, b: 0.49056602, a: 1}
     - _MoonColor: {r: 0, g: 0.7735849, b: 0.010571192, a: 1}
-    - _SkyColor: {r: 0.11294055, g: 0.49477538, b: 0.8867924, a: 1}
+    - _SkyColor: {r: 0, g: 0.70055115, b: 0.9607843, a: 1}
     - _SkyboxRotationAxis: {r: 0, g: 1, b: 0, a: 0}
     - _SunColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

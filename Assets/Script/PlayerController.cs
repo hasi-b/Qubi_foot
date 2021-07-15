@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            steer = Vector3.zero;
+            steer = Vector3.zero; 
         }
         
         rb.AddForce(Vector3.forward +steer , ForceMode.VelocityChange);
