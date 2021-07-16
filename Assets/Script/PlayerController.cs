@@ -13,10 +13,10 @@ public class PlayerController : MonoBehaviour
     bool isGrounded;
     public LayerMask groundLayer;
     public float jumpForce = 5f;
-    private const float doubleTapTime = .2f;
+    private const float doubleTapTime = 2f;
     public float bounds = 5;
     public SphereCollider col;
-    private float lastTapTime;
+    private float lastTapTime=0f;
 
     // Start is called before the first frame update
     void Start()
@@ -39,16 +39,21 @@ public class PlayerController : MonoBehaviour
             
 
             lastMousePos = Input.mousePosition;
-            lastTapTime = Time.time;
+            
             float timeSinceLastTap = Time.time - lastTapTime;
+
+            
+            Debug.Log("lastLapTime"+ lastTapTime);
+            Debug.Log("timeSinceLapTime" + timeSinceLastTap);
             
 
-            if (isGrounded && timeSinceLastTap<doubleTapTime)
+            if (isGrounded && (timeSinceLastTap<doubleTapTime))
             {
                Jump();
                 isGrounded = false;
             }
-            
+            lastTapTime = Time.time;
+
         }
 
 
