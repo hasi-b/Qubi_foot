@@ -555,7 +555,12 @@ MonoBehaviour:
   sensitivity: 0.16
   clampdelta: 42
   clampforwardSpeed: 14
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  jumpForce: 15
   bounds: 5
+  col: {fileID: 0}
 --- !u!54 &1017554502
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -570,7 +575,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 4
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!135 &1017554503
 SphereCollider:
@@ -808,6 +813,18 @@ PrefabInstance:
     - target: {fileID: 8139660868374484501, guid: d88414880d9abc7409568768fc4939a1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8139660868745097732, guid: d88414880d9abc7409568768fc4939a1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8139660868745097735, guid: d88414880d9abc7409568768fc4939a1, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8139660869820754450, guid: d88414880d9abc7409568768fc4939a1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8139660869970792554, guid: d88414880d9abc7409568768fc4939a1, type: 3}
       propertyPath: m_LocalPosition.z

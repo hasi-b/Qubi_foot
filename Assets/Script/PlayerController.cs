@@ -10,9 +10,12 @@ public class PlayerController : MonoBehaviour
     public float sensitivity = .16f,clampdelta = 42f,clampforwardSpeed=14f;
     Vector3 steer;
     Vector3 forwardSpeed;
-
+    bool isGrounded;
+    public LayerMask groundLayer;
+    public float jumpForce = 5f;
 
     public float bounds = 5;
+    public SphereCollider col;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +26,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        col = GetComponent<SphereCollider>();
     }
 
     // Update is called once per frame
@@ -31,6 +35,12 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             lastMousePos = Input.mousePosition;
+            if (isGrounded)
+            {
+               Jump();
+                isGrounded = false;
+            }
+            
         }
 
 
@@ -57,4 +67,25 @@ public class PlayerController : MonoBehaviour
 
 
     }
+    void Jump()
+    {
+        Vector3 vectory = new Vector3(0, jumpForce, 0);
+        rb.AddForce(vectory, ForceMode.Impulse);
+    }
+
+   private bool IsGrounded()
+    {
+        return Physics.CheckCapsule(col.bounds.center, new Vector3(col.bounds.center.x, col.bounds.min.y, col.bounds.center.z), col.radius * .9f, groundLayer);
+
+
+       
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            isGrounded = true;
+        }
+    }
+
 }

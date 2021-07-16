@@ -21,10 +21,10 @@ public class ColorLerp : MonoBehaviour
     void Update()
     {
         cubeMeshRenderer.material.color = Color.Lerp(cubeMeshRenderer.material.color, mycolor[colorIndex], lerpTime*Time.deltaTime);
-        Debug.Log("Applied");
+      //  Debug.Log("Applied");
         t = Mathf.Lerp(t, 1f, lerpTime * Time.deltaTime);
         
-            Debug.Log("If");
+           // Debug.Log("If");
             t = 0f;
             colorIndex++;
             colorIndex = (colorIndex >= len) ? 0 : colorIndex;

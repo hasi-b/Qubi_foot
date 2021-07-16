@@ -18,9 +18,9 @@ public class GroundTIle : MonoBehaviour
         if (other.tag == "Player")
         {
             groundSpawner.spawnTile();
-            Debug.Log("Spawned");
+           // Debug.Log("Spawned");
             Destroy(gameObject, 2);
-            Debug.Log("Previous Destroyed");
+           // Debug.Log("Previous Destroyed");
         }
 
     }
