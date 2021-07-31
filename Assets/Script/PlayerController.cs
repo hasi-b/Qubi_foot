@@ -43,8 +43,8 @@ public class PlayerController : MonoBehaviour
             float timeSinceLastTap = Time.time - lastTapTime;
 
             
-            Debug.Log("lastLapTime"+ lastTapTime);
-            Debug.Log("timeSinceLapTime" + timeSinceLastTap);
+           // Debug.Log("lastLapTime"+ lastTapTime);
+           // Debug.Log("timeSinceLapTime" + timeSinceLastTap);
             
 
             if (isGrounded && (timeSinceLastTap<doubleTapTime))
