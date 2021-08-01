@@ -37,7 +37,7 @@ public class ObstacleSpawner : MonoBehaviour
               spawnPoints[i] = gameObject.transform.GetChild(i).gameObject;
             //Random.state = System.DateTime.Now.Millisecond;
             int Randomize = Random.Range(1,5);
-            Debug.Log("RAnodmize"+Randomize);
+           // Debug.Log("RAnodmize"+Randomize);
             bool rndbool=Random.value > 0.5; 
             
             if (!rndbool)
