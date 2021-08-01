@@ -28,6 +28,8 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         col = GetComponent<SphereCollider>();
+        rb.maxAngularVelocity = 30f;
+        
     }
 
     // Update is called once per frame
