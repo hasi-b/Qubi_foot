@@ -75,6 +75,7 @@ public class PlayerController : MonoBehaviour
         }
         
         rb.AddForce(Vector3.forward +steer , ForceMode.VelocityChange);
+        
         if (rb.velocity.magnitude > clampforwardSpeed)
         {
             rb.velocity = Vector3.ClampMagnitude(rb.velocity, clampforwardSpeed);
