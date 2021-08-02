@@ -44,16 +44,19 @@ public class ObstacleSpawner : MonoBehaviour
             {
 
 
-                Instantiate(cone, spawnPoints[i].transform.position, Quaternion.identity);
+               GameObject spawned =  Instantiate(cone, spawnPoints[i].transform.position, Quaternion.identity);
+                spawned.transform.parent = spawnPoints[i].transform;
             }
             if(rndbool && postCount==0)
             {
-                Instantiate(post, spawnPoints[i].transform.position, Quaternion.identity);
+                GameObject spawned= Instantiate(post, spawnPoints[i].transform.position, Quaternion.identity);
+                spawned.transform.parent = spawnPoints[i].transform;
                 postCount = 1;
             }
             else
             {
-                Instantiate(cone, spawnPoints[i].transform.position, Quaternion.identity);
+               GameObject spawned =  Instantiate(cone, spawnPoints[i].transform.position, Quaternion.identity);
+                spawned.transform.parent = spawnPoints[i].transform;
             }
           }
         
