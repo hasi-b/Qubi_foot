@@ -10,7 +10,7 @@ public class GroundSpawner : MonoBehaviour
     void Start()
     {
         spawnTile();
-        spawnTile();
+       
     }
 
     // Update is called once per frame
