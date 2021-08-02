@@ -11,15 +11,15 @@ public class ObstacleSpawner : MonoBehaviour
    // private GameObject[] obstacles = new GameObject[obstacleCount] ;
     private GameObject[] spawnPoints = new GameObject[spawnCounts];
     GameObject parentSpawner;
-    GameObject cone;
-    GameObject post;
+    public GameObject cone;
+    public GameObject post;
     GameObject spawn1, spawn2, spawn3;
     int postCount = 0;
     // Start is called before the first frame update
     void Start()
     {
-        cone = (GameObject)Resources.Load("LP_Cone");
-        post = (GameObject)Resources.Load("Post");
+       // cone = (GameObject)Resources.Load("LP_Cone");
+       // post = (GameObject)Resources.Load("Post");
 
        /* spawn1 = gameObject.transform.GetChild(0).gameObject;
         spawn2 = gameObject.transform.GetChild(1).gameObject;

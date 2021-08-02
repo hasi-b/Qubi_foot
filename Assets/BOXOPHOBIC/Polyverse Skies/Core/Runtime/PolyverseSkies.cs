@@ -131,7 +131,7 @@ public class PolyverseSkies : StyledMonoBehaviour
         float timeSinceStarted = Time.time - timeStartedLerping;
         float percentageCompleted = timeSinceStarted / LerpTime;
         time = Mathf.PingPong(percentageCompleted*speed,1);
-        Debug.Log("Time"+ time);
+       // Debug.Log("Time"+ time);
         timeOfDay = time;
        
            
