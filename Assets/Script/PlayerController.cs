@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     public float bounds = 5;
     public SphereCollider col;
     private float lastTapTime=0f;
+    float speed = 100f;
 
     // Start is called before the first frame update
     void Start()
@@ -73,6 +74,7 @@ public class PlayerController : MonoBehaviour
         {
             steer = Vector3.zero; 
         }
+        
         
         rb.AddForce(Vector3.forward +steer , ForceMode.VelocityChange);
         
