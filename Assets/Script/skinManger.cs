@@ -15,6 +15,7 @@ public class skinManger : MonoBehaviour
     private int selectedSkin = 0;
     public GameObject playerSkin;
     private Material[] mats = new Material[2];
+    public Camera cm;
     Vector3 rot = new Vector3(0,360,0);
     
 
@@ -55,6 +56,7 @@ public class skinManger : MonoBehaviour
     private void OnEnable()
     {
         playerSkin.transform.DORotate(rot, 0.1f).SetLoops(-1, LoopType.Incremental);
+        //cm.backgroundColor = Random.ColorHSV();
        // playerSkin.transform.DORotate(rot, 0.3f, RotateMode.Fast).SetLoops(-1).SetEase(Ease.Linear);
         LeanTween.moveY(playerSkin,1f,1f).setLoopPingPong().setEase(easetype);
     }
